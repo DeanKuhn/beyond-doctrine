@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Research and Papers on Religion's Hidden Side">
+        <meta name="theme-color" content="blue">
+        <title>Research & Papers</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class ="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="nav" class="nav">
+            <a id="pug" class="plug" href="password.html">Cosmic Diary</a><br>
+            <a id="pug" class="plug" href="research.html">Research & Papers</a><br>
+            <a id="pug" class="plug" href="contactMe.html">Contact Me</a><br>
+        </div>
+
+        <script>
+            function toggleNav() {
+                document.getElementById('nav').classList.toggle('show');
+            }
+        </script>
+
+        <main>
+            <p></p>
+            <hr>
+            <h1>Research & Papers</h1>
+            <h4>Type in keywords to find a specific article.<br>
+            Or, scroll until you find an interesting subject.</h4>
+
+            <script>
+                const pages = [
+                    { title: "Who Really Wrote the Bible?", file: "ResearchPapers/bibleAuthorship.html" },
+                    { title: "When Was Ancient Jerusalem Really Destroyed?", file: "ResearchPapers/jerusalemDestruction.html" }
+                ];
+            </script>
+
+            <input id="searchBox" type="text" placeholder="Search away...">
+            <p></p>
+            <div id="results"></div>
+
+            <script>
+                document.getElementById('searchBox').addEventListener('input', function () {
+                const term = this.value.toLowerCase();
+                const output = document.getElementById('results');
+                
+                if (term.trim() === "") {
+                    output.innerHTML = "";
+                    return;
+                }
+                
+                output.innerHTML = "";
+
+                const hits = pages.filter(p => p.title.toLowerCase().includes(term));
+
+                hits.forEach(p => {
+                    const link = document.createElement('a');
+                    link.href = p.file;
+                    link.textContent = p.title;
+                    link.className = 'searchLink';
+                    
+                    const box = document.createElement('div');
+                    box.className = 'resultBox';
+                    box.appendChild(link);
+
+                    output.appendChild(box);
+                });
+            });
+            </script>
+
+            <section>
+                <hr>
+                <div class="paper">
+                    <a href="ResearchPapers/bibleAuthorship.html">Who Really Wrote the Bible?</a>
+                </div>
+
+                <div class="paper">
+                    <a href="ResearchPapers/jerusalemDestruction.html">When Was Ancient Jerusalem Really Destroyed?</a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
