@@ -114,3 +114,24 @@ hr {
     color: var(--textColor1);
     text-decoration: none;
 }
+
+
+/* Contact Me Email */
+
+.paper2 {
+    color: var(--textColor1);
+    max-width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    text-align: center;
+    color: var(--textColor1);
+    background: linear-gradient(45deg, var(--backgroundColor1), var(--backgroundColor2));
+    border-radius: 5px 7px;
+    text-decoration: none;
+}
+
+.paper2 > a {
+    color: var(--textColor1);
+    text-decoration: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Reach Out To Me!">
+        <meta name="theme-color" content="blue">
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class ="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="nav" class="nav">
+            <a id="pug" class="plug" href="index.html">Home</a><br>
+            <a id="pug" class="plug" href="passwords.html">Cosmic Diary</a><br>
+            <a id="pug" class="plug" href="research.html">Research & Papers</a><br>
+            <a id="pug" class="plug" href="contactMe.html">Contact Me</a><br>
+        </div>
+
+        <script>
+            function toggleNav() {
+                document.getElementById('nav').classList.toggle('show');
+            }
+        </script>
+
+        <main>
+            <p></p>
+            <hr>
+            <h1>Send me your thoughts!</h1>
+            <h4>I will happily take article requests as well as answer any questions you may have.</h4>
+            <div class="paper2">
+                <a href="mailto:bibbagd@gmail.com">My email</a>
+            </div>
+
+        </main>
+    </body>
+</html>
