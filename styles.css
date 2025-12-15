@@ -1,6 +1,9 @@
 * {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+
 }
+
 
 :root {
     --backgroundColor1: rgb(27, 27, 94);
@@ -195,8 +198,12 @@ border: 2px solid black;
         background-color: #2a2a2a;
     }
 
-    /* Optional: scrollable table if too tall */
+    /*Optional: scrollable table if too tall */ 
     .tableContainer {
         max-height: 400px;
         overflow-y: auto;
     }
+
+    
+
+    
